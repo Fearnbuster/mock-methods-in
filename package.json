@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc"
   },
   "author": "",
   "license": "MIT",
@@ -15,5 +16,8 @@
   "dependencies": {
     "@types/jest": "^25.1.4",
     "jest": "^25.1.0"
-  }
+  },
+  "files": [
+    "dist/**/*"
+  ]
 }
