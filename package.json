@@ -8,7 +8,7 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "author": "",
+  "author": "Seth Fearnside",
   "license": "MIT",
   "devDependencies": {
     "ts-jest": "^25.2.1",
@@ -20,5 +20,7 @@
   },
   "files": [
     "dist/**/*"
-  ]
+  ],
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/Fearnbuster/mock-methods-in"
 }
