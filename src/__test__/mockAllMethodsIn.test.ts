@@ -99,6 +99,22 @@ describe(mockMethodsIn, () => {
     expect(jest.isMockFunction(constructor)).toBeFalsy();
   });
 
+  it('should not mock any keys that are excluded', () => {
+    mockMethodsIn(
+      child, {
+        excludedKeys: [
+          'gpMethod',
+          'pMethod',
+        ]
+      } 
+    );
+
+    expect(jest.isMockFunction(child.ggpMethod)).toBeTruthy();
+    expect(jest.isMockFunction(child.gpMethod)).toBeFalsy();
+    expect(jest.isMockFunction(child.pMethod)).toBeFalsy();
+    expect(jest.isMockFunction(child.Method)).toBeTruthy();
+  });
+
   it('should not mock any functions that are excluded', () => {
     mockMethodsIn(
       child, {
