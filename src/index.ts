@@ -50,7 +50,7 @@ class MethodMocker {
       inheritanceChainBreakpoint = null,
       givenObjectIsPrototype = false,
       proto = this.proto = Reflect.getPrototypeOf(obj),
-      shouldMockConstructor = true
+      shouldMockConstructor = false
     } = options || {};
 
     this.obj = obj;

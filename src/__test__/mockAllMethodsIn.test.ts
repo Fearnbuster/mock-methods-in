@@ -82,7 +82,7 @@ describe(mockMethodsIn, () => {
   });
 
   it('should mock the given objects constructor by default', () => {
-    mockMethodsIn(child);
+    mockMethodsIn(child, { shouldMockConstructor: true });
 
     const constructor = getConstructorFrom(child);
 
